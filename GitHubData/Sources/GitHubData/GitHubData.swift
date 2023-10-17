@@ -1,2 +1,3 @@
-// The Swift Programming Language
-// https://docs.swift.org/swift-book
+public struct GitHubData {
+    public static let repository: GitHubRepository = DefaultGitHubRepository()
+}

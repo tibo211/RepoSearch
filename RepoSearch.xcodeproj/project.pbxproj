@@ -11,6 +11,7 @@
 		BB9E17ED2ADEE605004BDA2D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB9E17EC2ADEE605004BDA2D /* ContentView.swift */; };
 		BB9E17EF2ADEE606004BDA2D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BB9E17EE2ADEE606004BDA2D /* Assets.xcassets */; };
 		BB9E17F22ADEE606004BDA2D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BB9E17F12ADEE606004BDA2D /* Preview Assets.xcassets */; };
+		BB9E17FE2ADF011E004BDA2D /* GitHubData in Frameworks */ = {isa = PBXBuildFile; productRef = BB9E17FD2ADF011E004BDA2D /* GitHubData */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BB9E17FE2ADF011E004BDA2D /* GitHubData in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -39,6 +41,7 @@
 				BB9E17FB2ADEEC2D004BDA2D /* GitHubData */,
 				BB9E17E92ADEE605004BDA2D /* RepoSearch */,
 				BB9E17E82ADEE605004BDA2D /* Products */,
+				BB9E17FC2ADF011E004BDA2D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -69,6 +72,13 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		BB9E17FC2ADF011E004BDA2D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -85,6 +95,9 @@
 			dependencies = (
 			);
 			name = RepoSearch;
+			packageProductDependencies = (
+				BB9E17FD2ADF011E004BDA2D /* GitHubData */,
+			);
 			productName = RepoSearch;
 			productReference = BB9E17E72ADEE605004BDA2D /* RepoSearch.app */;
 			productType = "com.apple.product-type.application";
@@ -346,6 +359,13 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		BB9E17FD2ADF011E004BDA2D /* GitHubData */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = GitHubData;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = BB9E17DF2ADEE605004BDA2D /* Project object */;
 }

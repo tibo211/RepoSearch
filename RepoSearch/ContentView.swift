@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import GitHubData
 
 struct ContentView: View {
     var body: some View {
@@ -13,7 +14,12 @@ struct ContentView: View {
             Image(systemName: "globe")
                 .imageScale(.large)
                 .foregroundStyle(.tint)
-            Text("Hello, world!")
+            Button("search test") {
+                Task {
+                    let items = try await GitHubData.repository.searchRepositories(query: "tetris")
+                    print(items)
+                }
+            }
         }
         .padding()
     }
