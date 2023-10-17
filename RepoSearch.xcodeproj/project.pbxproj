@@ -19,6 +19,7 @@
 		BB9E17EC2ADEE605004BDA2D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		BB9E17EE2ADEE606004BDA2D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BB9E17F12ADEE606004BDA2D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		BB9E17FB2ADEEC2D004BDA2D /* GitHubData */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = GitHubData; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,6 +36,7 @@
 		BB9E17DE2ADEE605004BDA2D = {
 			isa = PBXGroup;
 			children = (
+				BB9E17FB2ADEEC2D004BDA2D /* GitHubData */,
 				BB9E17E92ADEE605004BDA2D /* RepoSearch */,
 				BB9E17E82ADEE605004BDA2D /* Products */,
 			);
