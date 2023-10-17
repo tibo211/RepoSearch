@@ -6,7 +6,9 @@
 //
 
 import Foundation
+import InitMacro
 
+@Init
 public struct Owner {
     public let name: String
     public let avatarUrl: String

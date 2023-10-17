@@ -6,7 +6,9 @@
 //
 
 import Foundation
+import InitMacro
 
+@Init
 public struct RepositoryItem {
     public let name: String
     public let description: String?
