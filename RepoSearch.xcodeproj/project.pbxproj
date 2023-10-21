@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BB08A9CF2AE426B2003E021D /* RepositoryItem+Previews.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB08A9CE2AE426B2003E021D /* RepositoryItem+Previews.swift */; };
 		BB1C070E2AE293FA00713BC6 /* RepositoryRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB1C070D2AE293FA00713BC6 /* RepositoryRow.swift */; };
 		BB9E17EB2ADEE605004BDA2D /* RepoSearchApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB9E17EA2ADEE605004BDA2D /* RepoSearchApp.swift */; };
 		BB9E17ED2ADEE605004BDA2D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB9E17EC2ADEE605004BDA2D /* ContentView.swift */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BB08A9CE2AE426B2003E021D /* RepositoryItem+Previews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RepositoryItem+Previews.swift"; sourceTree = "<group>"; };
 		BB1C070D2AE293FA00713BC6 /* RepositoryRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryRow.swift; sourceTree = "<group>"; };
 		BB9E17E72ADEE605004BDA2D /* RepoSearch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RepoSearch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB9E17EA2ADEE605004BDA2D /* RepoSearchApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoSearchApp.swift; sourceTree = "<group>"; };
@@ -79,6 +81,7 @@
 			isa = PBXGroup;
 			children = (
 				BB9E17F12ADEE606004BDA2D /* Preview Assets.xcassets */,
+				BB08A9CE2AE426B2003E021D /* RepositoryItem+Previews.swift */,
 			);
 			path = "Preview Content";
 			sourceTree = "<group>";
@@ -166,6 +169,7 @@
 				BB1C070E2AE293FA00713BC6 /* RepositoryRow.swift in Sources */,
 				BB9E17ED2ADEE605004BDA2D /* ContentView.swift in Sources */,
 				BB9E17EB2ADEE605004BDA2D /* RepoSearchApp.swift in Sources */,
+				BB08A9CF2AE426B2003E021D /* RepositoryItem+Previews.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -298,7 +302,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"RepoSearch/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "RepoSearch/Preview\\ Content";
 				DEVELOPMENT_TEAM = QA23EPZ5C9;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -327,7 +331,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"RepoSearch/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "RepoSearch/Preview\\ Content";
 				DEVELOPMENT_TEAM = QA23EPZ5C9;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
