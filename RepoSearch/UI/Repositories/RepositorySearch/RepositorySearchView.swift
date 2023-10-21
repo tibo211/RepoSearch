@@ -27,6 +27,7 @@ struct RepositorySearchView: View {
                 await viewModel.search()
             }
         }
+        .alert(error: $viewModel.showError)
     }
 }
 

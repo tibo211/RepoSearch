@@ -13,6 +13,8 @@
 		BB08A9DC2AE437DD003E021D /* RepositorySearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB08A9DB2AE437DD003E021D /* RepositorySearchViewModel.swift */; };
 		BB08A9E42AE44193003E021D /* RepositorySearchViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB08A9E32AE44193003E021D /* RepositorySearchViewModelTests.swift */; };
 		BB08A9EB2AE44589003E021D /* MockGitHubRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB08A9EA2AE44589003E021D /* MockGitHubRepository.swift */; };
+		BB08A9F12AE45151003E021D /* ErrorAlertModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB08A9F02AE45151003E021D /* ErrorAlertModifier.swift */; };
+		BB08A9F42AE452AF003E021D /* Binding+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB08A9F32AE452AF003E021D /* Binding+Extensions.swift */; };
 		BB1C070E2AE293FA00713BC6 /* RepositoryRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB1C070D2AE293FA00713BC6 /* RepositoryRow.swift */; };
 		BB9E17EB2ADEE605004BDA2D /* RepoSearchApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB9E17EA2ADEE605004BDA2D /* RepoSearchApp.swift */; };
 		BB9E17EF2ADEE606004BDA2D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BB9E17EE2ADEE606004BDA2D /* Assets.xcassets */; };
@@ -38,6 +40,8 @@
 		BB08A9E12AE44193003E021D /* RepoSearchTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RepoSearchTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB08A9E32AE44193003E021D /* RepositorySearchViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositorySearchViewModelTests.swift; sourceTree = "<group>"; };
 		BB08A9EA2AE44589003E021D /* MockGitHubRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockGitHubRepository.swift; sourceTree = "<group>"; };
+		BB08A9F02AE45151003E021D /* ErrorAlertModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorAlertModifier.swift; sourceTree = "<group>"; };
+		BB08A9F32AE452AF003E021D /* Binding+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Binding+Extensions.swift"; sourceTree = "<group>"; };
 		BB1C070D2AE293FA00713BC6 /* RepositoryRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryRow.swift; sourceTree = "<group>"; };
 		BB9E17E72ADEE605004BDA2D /* RepoSearch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RepoSearch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB9E17EA2ADEE605004BDA2D /* RepoSearchApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoSearchApp.swift; sourceTree = "<group>"; };
@@ -109,6 +113,22 @@
 			path = Mocks;
 			sourceTree = "<group>";
 		};
+		BB08A9ED2AE45053003E021D /* Modifiers */ = {
+			isa = PBXGroup;
+			children = (
+				BB08A9F02AE45151003E021D /* ErrorAlertModifier.swift */,
+			);
+			path = Modifiers;
+			sourceTree = "<group>";
+		};
+		BB08A9F22AE4529F003E021D /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				BB08A9F32AE452AF003E021D /* Binding+Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		BB1C070C2AE293D900713BC6 /* UI */ = {
 			isa = PBXGroup;
 			children = (
@@ -140,6 +160,8 @@
 		BB9E17E92ADEE605004BDA2D /* RepoSearch */ = {
 			isa = PBXGroup;
 			children = (
+				BB08A9F22AE4529F003E021D /* Extensions */,
+				BB08A9ED2AE45053003E021D /* Modifiers */,
 				BB1C070C2AE293D900713BC6 /* UI */,
 				BB9E17EA2ADEE605004BDA2D /* RepoSearchApp.swift */,
 				BB9E17EE2ADEE606004BDA2D /* Assets.xcassets */,
@@ -277,6 +299,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				BB08A9D52AE43168003E021D /* RepositoryList.swift in Sources */,
+				BB08A9F42AE452AF003E021D /* Binding+Extensions.swift in Sources */,
+				BB08A9F12AE45151003E021D /* ErrorAlertModifier.swift in Sources */,
 				BB1C070E2AE293FA00713BC6 /* RepositoryRow.swift in Sources */,
 				BB08A9D82AE4379A003E021D /* RepositorySearchView.swift in Sources */,
 				BB08A9DC2AE437DD003E021D /* RepositorySearchViewModel.swift in Sources */,
