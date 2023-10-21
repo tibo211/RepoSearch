@@ -12,7 +12,13 @@ import GitHubData
     var searchText = ""
     private(set) var searchResults: [RepositoryItem]? = nil
     
-    func search() {
+    private let repository: GitHubRepository
+    
+    init(repository: GitHubRepository = GitHubData.repository) {
+        self.repository = repository
+    }
+    
+    func search() async {
         print("search")
     }
 }

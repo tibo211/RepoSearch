@@ -10,10 +10,10 @@ import XCTest
 
 final class RepositorySearchViewModelTests: XCTestCase {
     func testHaveSearchResults() async {
-        let viewModel = RepositorySearchViewModel()
+        let viewModel = RepositorySearchViewModel(repository: MockGitHubRepository(throwError: false))
         viewModel.searchText = "NVIDIA"
-        viewModel.search()
-        
+
+        await viewModel.search()
         XCTAssertNotNil(viewModel.searchResults)
     }
 }

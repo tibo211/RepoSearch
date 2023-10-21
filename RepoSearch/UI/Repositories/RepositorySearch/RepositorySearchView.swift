@@ -14,7 +14,9 @@ struct RepositorySearchView: View {
         Text("Search GitHub Repositories")
             .searchable(text: $viewModel.searchText)
             .onSubmit(of: .search) {
-                viewModel.search()
+                Task {
+                    await viewModel.search()
+                }
             }
     }
 }
