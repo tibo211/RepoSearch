@@ -19,6 +19,14 @@ import GitHubData
     }
     
     func search() async {
-        print("search")
+        do {
+            let results = try await repository.searchRepositories(query: searchText)
+            
+            await MainActor.run {
+                self.searchResults = results
+            }
+        } catch {
+            // TODO: Error handling.
+        }
     }
 }

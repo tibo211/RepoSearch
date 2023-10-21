@@ -11,13 +11,22 @@ struct RepositorySearchView: View {
     @State var viewModel: RepositorySearchViewModel
     
     var body: some View {
-        Text("Search GitHub Repositories")
-            .searchable(text: $viewModel.searchText)
-            .onSubmit(of: .search) {
-                Task {
-                    await viewModel.search()
+        Group {
+            if let results = viewModel.searchResults {
+                RepositoryList(items: results) { item in
+                    // TODO: Implement item selection
                 }
+            } else {
+                // Placeholder prompt.
+                Text("Search GitHub Repositories")
             }
+        }
+        .searchable(text: $viewModel.searchText)
+        .onSubmit(of: .search) {
+            Task {
+                await viewModel.search()
+            }
+        }
     }
 }
 
