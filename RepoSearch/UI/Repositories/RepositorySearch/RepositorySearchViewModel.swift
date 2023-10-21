@@ -6,9 +6,11 @@
 //
 
 import SwiftUI
+import GitHubData
 
 @Observable final class RepositorySearchViewModel {
     var searchText = ""
+    private(set) var searchResults: [RepositoryItem]? = nil
     
     func search() {
         print("search")

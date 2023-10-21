@@ -11,6 +11,7 @@
 		BB08A9D52AE43168003E021D /* RepositoryList.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB08A9D42AE43168003E021D /* RepositoryList.swift */; };
 		BB08A9D82AE4379A003E021D /* RepositorySearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB08A9D72AE4379A003E021D /* RepositorySearchView.swift */; };
 		BB08A9DC2AE437DD003E021D /* RepositorySearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB08A9DB2AE437DD003E021D /* RepositorySearchViewModel.swift */; };
+		BB08A9E42AE44193003E021D /* RepoSearchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB08A9E32AE44193003E021D /* RepoSearchTests.swift */; };
 		BB1C070E2AE293FA00713BC6 /* RepositoryRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB1C070D2AE293FA00713BC6 /* RepositoryRow.swift */; };
 		BB9E17EB2ADEE605004BDA2D /* RepoSearchApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB9E17EA2ADEE605004BDA2D /* RepoSearchApp.swift */; };
 		BB9E17EF2ADEE606004BDA2D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BB9E17EE2ADEE606004BDA2D /* Assets.xcassets */; };
@@ -18,11 +19,23 @@
 		BB9E17FE2ADF011E004BDA2D /* GitHubData in Frameworks */ = {isa = PBXBuildFile; productRef = BB9E17FD2ADF011E004BDA2D /* GitHubData */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		BB08A9E82AE44201003E021D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BB9E17DF2ADEE605004BDA2D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BB9E17E62ADEE605004BDA2D;
+			remoteInfo = RepoSearch;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		BB08A9CE2AE426B2003E021D /* RepositoryItem+Previews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RepositoryItem+Previews.swift"; sourceTree = "<group>"; };
 		BB08A9D42AE43168003E021D /* RepositoryList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryList.swift; sourceTree = "<group>"; };
 		BB08A9D72AE4379A003E021D /* RepositorySearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositorySearchView.swift; sourceTree = "<group>"; };
 		BB08A9DB2AE437DD003E021D /* RepositorySearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositorySearchViewModel.swift; sourceTree = "<group>"; };
+		BB08A9E12AE44193003E021D /* RepoSearchTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RepoSearchTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BB08A9E32AE44193003E021D /* RepoSearchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoSearchTests.swift; sourceTree = "<group>"; };
 		BB1C070D2AE293FA00713BC6 /* RepositoryRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryRow.swift; sourceTree = "<group>"; };
 		BB9E17E72ADEE605004BDA2D /* RepoSearch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RepoSearch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB9E17EA2ADEE605004BDA2D /* RepoSearchApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoSearchApp.swift; sourceTree = "<group>"; };
@@ -32,6 +45,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		BB08A9DE2AE44193003E021D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		BB9E17E42ADEE605004BDA2D /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -70,6 +90,14 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		BB08A9E22AE44193003E021D /* RepoSearchTests */ = {
+			isa = PBXGroup;
+			children = (
+				BB08A9E32AE44193003E021D /* RepoSearchTests.swift */,
+			);
+			path = RepoSearchTests;
+			sourceTree = "<group>";
+		};
 		BB1C070C2AE293D900713BC6 /* UI */ = {
 			isa = PBXGroup;
 			children = (
@@ -83,6 +111,7 @@
 			children = (
 				BB9E17FB2ADEEC2D004BDA2D /* GitHubData */,
 				BB9E17E92ADEE605004BDA2D /* RepoSearch */,
+				BB08A9E22AE44193003E021D /* RepoSearchTests */,
 				BB9E17E82ADEE605004BDA2D /* Products */,
 				BB9E17FC2ADF011E004BDA2D /* Frameworks */,
 			);
@@ -92,6 +121,7 @@
 			isa = PBXGroup;
 			children = (
 				BB9E17E72ADEE605004BDA2D /* RepoSearch.app */,
+				BB08A9E12AE44193003E021D /* RepoSearchTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -126,6 +156,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		BB08A9E02AE44193003E021D /* RepoSearchTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BB08A9E52AE44193003E021D /* Build configuration list for PBXNativeTarget "RepoSearchTests" */;
+			buildPhases = (
+				BB08A9DD2AE44193003E021D /* Sources */,
+				BB08A9DE2AE44193003E021D /* Frameworks */,
+				BB08A9DF2AE44193003E021D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BB08A9E92AE44201003E021D /* PBXTargetDependency */,
+			);
+			name = RepoSearchTests;
+			productName = RepoSearchTests;
+			productReference = BB08A9E12AE44193003E021D /* RepoSearchTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		BB9E17E62ADEE605004BDA2D /* RepoSearch */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = BB9E17F52ADEE606004BDA2D /* Build configuration list for PBXNativeTarget "RepoSearch" */;
@@ -156,6 +204,10 @@
 				LastSwiftUpdateCheck = 1500;
 				LastUpgradeCheck = 1500;
 				TargetAttributes = {
+					BB08A9E02AE44193003E021D = {
+						CreatedOnToolsVersion = 15.0;
+						TestTargetID = BB9E17E62ADEE605004BDA2D;
+					};
 					BB9E17E62ADEE605004BDA2D = {
 						CreatedOnToolsVersion = 15.0;
 					};
@@ -175,11 +227,19 @@
 			projectRoot = "";
 			targets = (
 				BB9E17E62ADEE605004BDA2D /* RepoSearch */,
+				BB08A9E02AE44193003E021D /* RepoSearchTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		BB08A9DF2AE44193003E021D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		BB9E17E52ADEE605004BDA2D /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -192,6 +252,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		BB08A9DD2AE44193003E021D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BB08A9E42AE44193003E021D /* RepoSearchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		BB9E17E32ADEE605004BDA2D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -207,7 +275,59 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		BB08A9E92AE44201003E021D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BB9E17E62ADEE605004BDA2D /* RepoSearch */;
+			targetProxy = BB08A9E82AE44201003E021D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
+		BB08A9E62AE44193003E021D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = QA23EPZ5C9;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.felfoldy.RepoSearchTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RepoSearch.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/RepoSearch";
+			};
+			name = Debug;
+		};
+		BB08A9E72AE44193003E021D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = QA23EPZ5C9;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.felfoldy.RepoSearchTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RepoSearch.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/RepoSearch";
+			};
+			name = Release;
+		};
 		BB9E17F32ADEE606004BDA2D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -388,6 +508,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		BB08A9E52AE44193003E021D /* Build configuration list for PBXNativeTarget "RepoSearchTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BB08A9E62AE44193003E021D /* Debug */,
+				BB08A9E72AE44193003E021D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		BB9E17E22ADEE605004BDA2D /* Build configuration list for PBXProject "RepoSearch" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
