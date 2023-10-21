@@ -6,6 +6,7 @@
 //
 
 import GitHubData
+import Foundation
 
 extension [RepositoryItem] {
     /// These previews were created by GPT-4.
@@ -16,7 +17,7 @@ extension [RepositoryItem] {
             owner: Owner(name: "NVIDIA", avatarUrl: ""),
             language: "C++",
             numberOfStars: 1188,
-            htmlUrl: "https://github.com/NVIDIA/TensorRT-LLM"
+            htmlUrl: URL(string: "https://github.com/NVIDIA/TensorRT-LLM")!
         ),
         RepositoryItem(
             name: "codeshell",
@@ -24,7 +25,7 @@ extension [RepositoryItem] {
             owner: Owner(name: "WisdomShell", avatarUrl: ""),
             language: "Python",
             numberOfStars: 769,
-            htmlUrl: "https://github.com/WisdomShell/codeshell"
+            htmlUrl: URL(string: "https://github.com/WisdomShell/codeshell")!
         ),
         RepositoryItem(
             name: "localsend",
@@ -32,7 +33,7 @@ extension [RepositoryItem] {
             owner: Owner(name: "localsend", avatarUrl: ""),
             language: "Dart",
             numberOfStars: 18338,
-            htmlUrl: "https://github.com/localsend/localsend"
+            htmlUrl: URL(string: "https://github.com/localsend/localsend")!
         ),
         RepositoryItem(
             name: "XAgent",
@@ -40,7 +41,7 @@ extension [RepositoryItem] {
             owner: Owner(name: "OpenBMB", avatarUrl: ""),
             language: "TypeScript",
             numberOfStars: 2321,
-            htmlUrl: "https://github.com/OpenBMB/XAgent"
+            htmlUrl: URL(string: "https://github.com/OpenBMB/XAgent")!
         ),
     ]
 }

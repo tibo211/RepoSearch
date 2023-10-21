@@ -15,7 +15,7 @@ public struct RepositoryItem {
     public let owner: Owner
     public let language: String?
     public let numberOfStars: Int
-    public let htmlUrl: String
+    public let htmlUrl: URL
 }
 
 extension RepositoryItem: Decodable {

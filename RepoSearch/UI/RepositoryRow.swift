@@ -42,18 +42,9 @@ struct RepositoryRow: View {
             .font(.footnote)
         }
         .padding()
-        .safeAreaInset(edge: .top) {
-            Divider()
-        }
     }
 }
 
 #Preview {
-    ScrollView {
-        VStack(spacing: 0) {
-            ForEach([RepositoryItem].previews, id: \.name) { item in
-                RepositoryRow(item: item)
-            }
-        }
-     }
+    RepositoryRow(item: [RepositoryItem].previews[0])
 }
