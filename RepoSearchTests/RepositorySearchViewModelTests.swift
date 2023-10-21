@@ -25,4 +25,18 @@ final class RepositorySearchViewModelTests: XCTestCase {
         
         XCTAssertNotNil(viewModel.showError)
     }
+    
+    func testSearchText_onEmptyAlsoClearResults() async {
+        let viewModel = RepositorySearchViewModel(repository: MockGitHubRepository(throwError: false))
+        
+        viewModel.searchText = "query"
+        
+        await viewModel.search()
+
+        XCTAssertNotNil(viewModel.searchResults)
+        
+        viewModel.searchText = ""
+        
+        XCTAssertNil(viewModel.searchResults)
+    }
 }

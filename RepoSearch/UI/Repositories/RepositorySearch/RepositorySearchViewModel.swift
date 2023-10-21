@@ -9,7 +9,15 @@ import SwiftUI
 import GitHubData
 
 @Observable final class RepositorySearchViewModel {
-    var searchText = ""
+    var searchText = "" {
+        // Remove search results if we clear the text.
+        didSet {
+            if searchText.isEmpty {
+                searchResults = nil
+            }
+        }
+    }
+
     var showError: Error? = nil
 
     private(set) var searchResults: [RepositoryItem]? = nil

@@ -21,6 +21,7 @@ struct RepositorySearchView: View {
                 Text("Search GitHub Repositories")
             }
         }
+        .animation(.default, value: viewModel.searchResults?.isEmpty)
         .searchable(text: $viewModel.searchText)
         .onSubmit(of: .search) {
             Task {
