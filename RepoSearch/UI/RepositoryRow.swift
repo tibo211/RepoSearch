@@ -6,31 +6,38 @@
 //
 
 import SwiftUI
+import GitHubData
 
 struct RepositoryRow: View {
+    let item: RepositoryItem
+
     var body: some View {
         VStack(alignment: .leading) {
             HStack {
-                Text("XAgent")
+                Text(item.name)
                     .font(.title)
                 
                 Spacer()
 
+                // TODO: Set async image.
                 Image(systemName: "person.crop.circle")
-                Text("luyaxi")
+                Text(item.owner.name)
             }
             
-            Text("An Autonomous LLM Agent for Complex Task Solving")
-                .foregroundStyle(.secondary)
+            if let description = item.description {
+                Text(description)
+                    .foregroundStyle(.secondary)
+            }
             
             Divider()
             
             HStack {
-                Label("1855", systemImage: "star")
+                Label("\(item.numberOfStars)", systemImage: "star")
                 
                 Spacer()
-                
-                Text("TypeScript")
+                if let language = item.language {
+                    Text(language)
+                }
             }
             .font(.footnote)
         }
@@ -42,8 +49,11 @@ struct RepositoryRow: View {
 }
 
 #Preview {
-    VStack(spacing: 0) {
-        RepositoryRow()
-        RepositoryRow()
-    }
+    ScrollView {
+        VStack(spacing: 0) {
+            ForEach([RepositoryItem].previews, id: \.name) { item in
+                RepositoryRow(item: item)
+            }
+        }
+     }
 }
