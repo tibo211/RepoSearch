@@ -25,3 +25,7 @@ extension RepositoryItem: Decodable {
         case htmlUrl = "html_url"
     }
 }
+
+extension RepositoryItem: Identifiable {
+    public var id: URL { htmlUrl }
+}

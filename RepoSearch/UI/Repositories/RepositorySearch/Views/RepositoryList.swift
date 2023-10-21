@@ -13,7 +13,7 @@ struct RepositoryList: View {
     let select: (RepositoryItem) -> Void
     
     var body: some View {
-        List(items, id: \.name) { item in
+        List(items) { item in
             Button {
                 select(item)
             } label: {
