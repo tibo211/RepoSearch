@@ -11,7 +11,8 @@
 		BB08A9D52AE43168003E021D /* RepositoryList.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB08A9D42AE43168003E021D /* RepositoryList.swift */; };
 		BB08A9D82AE4379A003E021D /* RepositorySearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB08A9D72AE4379A003E021D /* RepositorySearchView.swift */; };
 		BB08A9DC2AE437DD003E021D /* RepositorySearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB08A9DB2AE437DD003E021D /* RepositorySearchViewModel.swift */; };
-		BB08A9E42AE44193003E021D /* RepoSearchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB08A9E32AE44193003E021D /* RepoSearchTests.swift */; };
+		BB08A9E42AE44193003E021D /* RepositorySearchViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB08A9E32AE44193003E021D /* RepositorySearchViewModelTests.swift */; };
+		BB08A9EB2AE44589003E021D /* MockGitHubRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB08A9EA2AE44589003E021D /* MockGitHubRepository.swift */; };
 		BB1C070E2AE293FA00713BC6 /* RepositoryRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB1C070D2AE293FA00713BC6 /* RepositoryRow.swift */; };
 		BB9E17EB2ADEE605004BDA2D /* RepoSearchApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB9E17EA2ADEE605004BDA2D /* RepoSearchApp.swift */; };
 		BB9E17EF2ADEE606004BDA2D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BB9E17EE2ADEE606004BDA2D /* Assets.xcassets */; };
@@ -35,7 +36,8 @@
 		BB08A9D72AE4379A003E021D /* RepositorySearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositorySearchView.swift; sourceTree = "<group>"; };
 		BB08A9DB2AE437DD003E021D /* RepositorySearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositorySearchViewModel.swift; sourceTree = "<group>"; };
 		BB08A9E12AE44193003E021D /* RepoSearchTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RepoSearchTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		BB08A9E32AE44193003E021D /* RepoSearchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoSearchTests.swift; sourceTree = "<group>"; };
+		BB08A9E32AE44193003E021D /* RepositorySearchViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositorySearchViewModelTests.swift; sourceTree = "<group>"; };
+		BB08A9EA2AE44589003E021D /* MockGitHubRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockGitHubRepository.swift; sourceTree = "<group>"; };
 		BB1C070D2AE293FA00713BC6 /* RepositoryRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryRow.swift; sourceTree = "<group>"; };
 		BB9E17E72ADEE605004BDA2D /* RepoSearch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RepoSearch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB9E17EA2ADEE605004BDA2D /* RepoSearchApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoSearchApp.swift; sourceTree = "<group>"; };
@@ -93,9 +95,18 @@
 		BB08A9E22AE44193003E021D /* RepoSearchTests */ = {
 			isa = PBXGroup;
 			children = (
-				BB08A9E32AE44193003E021D /* RepoSearchTests.swift */,
+				BB08A9EC2AE44741003E021D /* Mocks */,
+				BB08A9E32AE44193003E021D /* RepositorySearchViewModelTests.swift */,
 			);
 			path = RepoSearchTests;
+			sourceTree = "<group>";
+		};
+		BB08A9EC2AE44741003E021D /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				BB08A9EA2AE44589003E021D /* MockGitHubRepository.swift */,
+			);
+			path = Mocks;
 			sourceTree = "<group>";
 		};
 		BB1C070C2AE293D900713BC6 /* UI */ = {
@@ -256,7 +267,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BB08A9E42AE44193003E021D /* RepoSearchTests.swift in Sources */,
+				BB08A9EB2AE44589003E021D /* MockGitHubRepository.swift in Sources */,
+				BB08A9E42AE44193003E021D /* RepositorySearchViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
