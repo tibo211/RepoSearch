@@ -11,7 +11,9 @@ import SwiftUI
 struct RepoSearchApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            NavigationStack {
+                RepositorySearchView(viewModel: RepositorySearchViewModel())
+            }
         }
     }
 }
