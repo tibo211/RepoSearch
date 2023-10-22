@@ -43,6 +43,6 @@ struct RepositorySearchView: View {
 
 #Preview {
     NavigationStack {
-        RepositorySearchView(viewModel: RepositorySearchViewModel())
+        RepositorySearchView(viewModel: RepositorySearchViewModel(repository: PreviewGitHubRepository()))
     }
 }
