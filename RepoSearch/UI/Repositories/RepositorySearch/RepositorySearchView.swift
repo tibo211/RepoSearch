@@ -14,7 +14,9 @@ struct RepositorySearchView: View {
     
     var body: some View {
         Group {
-            if let results = viewModel.searchResults {
+            if viewModel.isLoading {
+                ProgressView()
+            } else if let results = viewModel.searchResults {
                 RepositoryList(items: results) { item in
                     selectedItem = item
                 }

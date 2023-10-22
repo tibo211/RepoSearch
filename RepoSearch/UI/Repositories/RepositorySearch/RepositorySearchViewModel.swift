@@ -20,6 +20,7 @@ import GitHubData
 
     var showError: Error? = nil
 
+    private(set) var isLoading: Bool = false
     private(set) var searchResults: [RepositoryItem]? = nil
 
     private let repository: GitHubRepository
@@ -29,14 +30,20 @@ import GitHubData
     }
     
     func search() async {
+        await MainActor.run {
+            isLoading = true
+        }
+        
         do {
             let results = try await repository.searchRepositories(query: searchText)
             
             await MainActor.run {
+                isLoading = false
                 searchResults = results
             }
         } catch {
             await MainActor.run {
+                isLoading = false
                 showError = error
             }
         }
