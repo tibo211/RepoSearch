@@ -73,15 +73,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		BB08A9D62AE43716003E021D /* Repositories */ = {
-			isa = PBXGroup;
-			children = (
-				BB08A9D92AE437AE003E021D /* RepositorySearch */,
-				BB08A9F52AE583A8003E021D /* RepositoryDetails */,
-			);
-			path = Repositories;
-			sourceTree = "<group>";
-		};
 		BB08A9D92AE437AE003E021D /* RepositorySearch */ = {
 			isa = PBXGroup;
 			children = (
@@ -146,7 +137,8 @@
 		BB1C070C2AE293D900713BC6 /* UI */ = {
 			isa = PBXGroup;
 			children = (
-				BB08A9D62AE43716003E021D /* Repositories */,
+				BB08A9D92AE437AE003E021D /* RepositorySearch */,
+				BB08A9F52AE583A8003E021D /* RepositoryDetails */,
 			);
 			path = UI;
 			sourceTree = "<group>";

@@ -14,6 +14,7 @@ struct RepositoryDetailsView: View {
     var body: some View {
         RepositoryContentView(item: item)
             .navigationTitle(item.name)
+            .navigationBarTitleDisplayMode(.inline)
     }
 }
 

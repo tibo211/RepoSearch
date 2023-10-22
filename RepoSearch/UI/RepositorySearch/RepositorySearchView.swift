@@ -35,6 +35,7 @@ struct RepositorySearchView: View {
         .navigationDestination(item: $selectedItem) { item in
             RepositoryDetailsView(item: item)
         }
+        .navigationTitle("Repositories")
         .alert(error: $viewModel.showError)
     }
 }
