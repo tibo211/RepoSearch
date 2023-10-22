@@ -46,5 +46,5 @@ struct RepositoryRow: View {
 }
 
 #Preview {
-    RepositoryRow(item: [RepositoryItem].previews[0])
+    RepositoryRow(item: .preview)
 }

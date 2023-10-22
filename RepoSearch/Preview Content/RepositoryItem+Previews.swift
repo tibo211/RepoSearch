@@ -8,6 +8,10 @@
 import GitHubData
 import Foundation
 
+extension RepositoryItem {
+    static let preview = [RepositoryItem].previews[0]
+}
+
 extension [RepositoryItem] {
     /// These previews were created by GPT-4.
     static let previews: [RepositoryItem] = [
