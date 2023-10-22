@@ -6,37 +6,62 @@
 //
 
 import XCTest
+import GitHubData
 @testable import RepoSearch
 
 final class RepositorySearchViewModelTests: XCTestCase {
-    func testSearch_showsResults() async {
-        let viewModel = RepositorySearchViewModel(repository: MockGitHubRepository(throwError: false))
+    typealias SubjectUnderTest = RepositorySearchViewModel
+    
+    func createSUT(repository: MockGitHubRepository) -> SubjectUnderTest {
+        RepositorySearchViewModel(repository: repository)
+    }
+
+    // MARK: - SearchState
+    
+    func testSearchState_returnsResults() async {
+        let result = [RepositoryItem].previews
+        
+        let viewModel = createSUT(repository: .mock(returns: .success(result)))
         viewModel.searchText = "NVIDIA"
 
         await viewModel.search()
         
-        XCTAssertNotNil(viewModel.searchResults)
+        XCTAssertEqual(viewModel.searchState, .results(result))
     }
     
-    func testSearch_showsError() async {
-        let viewModel = RepositorySearchViewModel(repository: MockGitHubRepository(throwError: true))
+    func testSearchState_searchPrompt() async {
+        let viewModel = createSUT(repository: .mock(returns: .success([])))
         
-        await viewModel.search()
-        
-        XCTAssertNotNil(viewModel.showError)
-    }
-    
-    func testSearchText_onEmptyAlsoClearResults() async {
-        let viewModel = RepositorySearchViewModel(repository: MockGitHubRepository(throwError: false))
+        XCTAssertEqual(viewModel.searchState, .prompt(.search))
         
         viewModel.searchText = "query"
         
         await viewModel.search()
-
-        XCTAssertNotNil(viewModel.searchResults)
+        XCTAssertNotEqual(viewModel.searchState, .prompt(.search))
         
         viewModel.searchText = ""
+        XCTAssertEqual(viewModel.searchState, .prompt(.search))
+    }
+    
+    func testSearchState_noResultsPrompt() async {
+        let viewModel = createSUT(repository: .mock(returns: .success([])))
         
-        XCTAssertNil(viewModel.searchResults)
+        viewModel.searchText = "query"
+        
+        await viewModel.search()
+        
+        XCTAssertEqual(viewModel.searchState, .prompt(.noResults("query")))
+    }
+    
+    // MARK: - Error handling
+    
+    func testSearch_showsError() async {
+        let error = URLError(.badURL)
+        
+        let viewModel = createSUT(repository: .mock(returns: .failure(error)))
+        
+        await viewModel.search()
+        
+        XCTAssertEqual(viewModel.showError as? URLError, error)
     }
 }

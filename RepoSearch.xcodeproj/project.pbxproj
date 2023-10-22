@@ -506,7 +506,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "RepoSearch/Preview\\ Content";
+				DEVELOPMENT_ASSET_PATHS = "RepoSearch/Preview\\ Content/RepositoryItem+Previews.swift RepoSearch/Preview\\ Content RepoSearch/Preview\\ Content/PreviewGitHubRepository.swift";
 				DEVELOPMENT_TEAM = QA23EPZ5C9;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -535,7 +535,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "RepoSearch/Preview\\ Content";
+				DEVELOPMENT_ASSET_PATHS = "RepoSearch/Preview\\ Content/RepositoryItem+Previews.swift RepoSearch/Preview\\ Content RepoSearch/Preview\\ Content/PreviewGitHubRepository.swift";
 				DEVELOPMENT_TEAM = QA23EPZ5C9;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;

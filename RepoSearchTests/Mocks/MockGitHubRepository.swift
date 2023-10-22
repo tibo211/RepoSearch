@@ -7,23 +7,23 @@
 
 import GitHubData
 import Foundation
+@testable import RepoSearch
 
 struct MockGitHubRepository: GitHubRepository {
-    let throwError: Bool
+    let result: Result<[RepositoryItem], Error>
     
     func searchRepositories(query: String) async throws -> [RepositoryItem] {
-        if throwError {
-            throw URLError(.notConnectedToInternet)
+        switch result {
+        case let .success(items):
+            return items
+        case let .failure(error):
+            throw error
         }
-        return [
-            RepositoryItem(
-                name: "TensorRT-LLM",
-                description: "Provides users with an easy-to-use Python API to define Large Language Models (LLMs) and build TensorRT engines...",
-                owner: Owner(name: "NVIDIA", avatarUrl: ""),
-                language: "C++",
-                numberOfStars: 1188,
-                htmlUrl: URL(string: "https://github.com/NVIDIA/TensorRT-LLM")!
-            ),
-        ]
+    }
+}
+
+extension GitHubRepository where Self == MockGitHubRepository {
+    static func mock(returns result: Result<[RepositoryItem], Error>) -> Self {
+        MockGitHubRepository(result: result)
     }
 }
