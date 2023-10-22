@@ -19,9 +19,15 @@ struct RepositoryRow: View {
                 
                 Spacer()
 
-                // TODO: Set async image.
-                Image(systemName: "person.crop.circle")
                 Text(item.owner.name)
+                
+                AsyncImage(url: URL(string: item.owner.avatarUrl)) { image in
+                    image.resizable()
+                } placeholder: {
+                    Image(systemName: "person.circle").resizable()
+                }
+                .frame(width: 20, height: 20)
+                .clipShape(Circle())
             }
             
             if let description = item.description {
