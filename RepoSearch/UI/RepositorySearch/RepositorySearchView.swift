@@ -26,7 +26,8 @@ struct RepositorySearchView: View {
             }
         }
         .animation(.default, value: viewModel.searchResults?.isEmpty)
-        .searchable(text: $viewModel.searchText)
+        .searchable(text: $viewModel.searchText,
+                    placement: .navigationBarDrawer(displayMode: .always))
         .onSubmit(of: .search) {
             Task {
                 await viewModel.search()
