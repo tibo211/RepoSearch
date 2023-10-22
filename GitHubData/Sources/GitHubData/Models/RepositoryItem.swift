@@ -26,6 +26,14 @@ extension RepositoryItem: Decodable {
     }
 }
 
-extension RepositoryItem: Identifiable {
+extension RepositoryItem: Identifiable, Hashable {
     public var id: URL { htmlUrl }
+    
+    public static func == (lhs: RepositoryItem, rhs: RepositoryItem) -> Bool {
+        lhs.id == rhs.id
+    }
+    
+    public func hash(into hasher: inout Hasher) {
+        hasher.combine(id)
+    }
 }

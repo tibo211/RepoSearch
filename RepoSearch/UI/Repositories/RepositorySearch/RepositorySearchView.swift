@@ -6,15 +6,17 @@
 //
 
 import SwiftUI
+import GitHubData
 
 struct RepositorySearchView: View {
     @State var viewModel: RepositorySearchViewModel
+    @State private var selectedItem: RepositoryItem?
     
     var body: some View {
         Group {
             if let results = viewModel.searchResults {
                 RepositoryList(items: results) { item in
-                    // TODO: Implement item selection
+                    selectedItem = item
                 }
             } else {
                 // Placeholder prompt.
@@ -27,6 +29,9 @@ struct RepositorySearchView: View {
             Task {
                 await viewModel.search()
             }
+        }
+        .navigationDestination(item: $selectedItem) { item in
+            RepositoryDetailsView(item: item)
         }
         .alert(error: $viewModel.showError)
     }
