@@ -13,19 +13,24 @@ struct RepositorySearchView: View {
     @State private var selectedItem: RepositoryItem?
     
     var body: some View {
-        Group {
-            if viewModel.isLoading {
+        VStack {
+            switch viewModel.searchState {
+            case .searchPrompt:
+                Text("Search GitHub Repositories")
+            case .loading:
                 ProgressView()
-            } else if let results = viewModel.searchResults {
-                RepositoryList(items: results) { item in
+            case let .results(items):
+                RepositoryList(items: items) { item in
                     selectedItem = item
                 }
-            } else {
-                // Placeholder prompt.
-                Text("Search GitHub Repositories")
+            case .noResults:
+                Image(systemName: "magnifyingglass")
+                Text("No Results for \"\(viewModel.searchText)\"")
+                Text("Check the spelling or try a new search")
+                    .foregroundStyle(.secondary)
             }
         }
-        .animation(.default, value: viewModel.searchResults?.isEmpty)
+        .animation(.default, value: viewModel.searchState)
         .searchable(text: $viewModel.searchText,
                     placement: .navigationBarDrawer(displayMode: .always))
         .onSubmit(of: .search) {
