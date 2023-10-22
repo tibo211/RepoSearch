@@ -13,21 +13,16 @@ struct RepositorySearchView: View {
     @State private var selectedItem: RepositoryItem?
     
     var body: some View {
-        VStack {
+        Group {
             switch viewModel.searchState {
-            case .searchPrompt:
-                Text("Search GitHub Repositories")
             case .loading:
                 ProgressView()
             case let .results(items):
                 RepositoryList(items: items) { item in
                     selectedItem = item
                 }
-            case .noResults:
-                Image(systemName: "magnifyingglass")
-                Text("No Results for \"\(viewModel.searchText)\"")
-                Text("Check the spelling or try a new search")
-                    .foregroundStyle(.secondary)
+            case let .prompt(type):
+                SearchPromptView(type: type)
             }
         }
         .animation(.default, value: viewModel.searchState)

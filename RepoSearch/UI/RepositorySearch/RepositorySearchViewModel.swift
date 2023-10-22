@@ -8,19 +8,23 @@
 import SwiftUI
 import GitHubData
 
-@Observable final class RepositorySearchViewModel {
-    enum SearchState: Equatable {
-        case searchPrompt
-        case loading
-        case results([RepositoryItem])
-        case noResults
+enum SearchState: Equatable {
+    enum SearchPromptType: Equatable {
+        case search
+        case noResults(String)
     }
+    
+    case loading
+    case results([RepositoryItem])
+    case prompt(SearchPromptType)
+}
 
+@Observable final class RepositorySearchViewModel {
     var searchText = "" {
         // Remove search results if we clear the text.
         didSet {
             if searchText.isEmpty {
-                searchState = .searchPrompt
+                searchState = .prompt(.search)
             }
         }
     }
@@ -28,7 +32,7 @@ import GitHubData
     var showError: Error? = nil
 
     private(set) var isLoading: Bool = false
-    private(set) var searchState: SearchState = .searchPrompt
+    private(set) var searchState: SearchState = .prompt(.search)
 
     private let repository: GitHubRepository
     
@@ -45,11 +49,15 @@ import GitHubData
             let results = try await repository.searchRepositories(query: searchText)
             
             await MainActor.run {
-                searchState = results.isEmpty ? .noResults : .results(results)
+                searchState = if results.isEmpty {
+                    .prompt(.noResults(searchText))
+                } else {
+                    .results(results)
+                }
             }
         } catch {
             await MainActor.run {
-                searchState = .searchPrompt
+                searchState = .prompt(.search)
                 showError = error
             }
         }
